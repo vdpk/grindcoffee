@@ -1,0 +1,49 @@
+{% extends 'catalog/_base.html' %}
+
+{% block content %}
+
+
+
+
+
+
+
+
+
+<div class="row">
+    <div class="col-sm-2">
+        <p>Some text1...</p>
+    </div>
+    <div class="col-sm-3">
+        <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+
+
+
+<div class="col-sm-4">
+
+        <div class="panel">
+            <div class="panel-heading" align="center">
+                <h1>{{ object.name }}</h1>
+                <p>{{ object.product_type}}</p>
+            </div>
+            <div class="panel-body">{{object.description}}</div>
+            <div class="panel-footer">
+                {% for item in product_variants %}
+                <div class="btn-group" role="group" align="center">
+                <button type="button" class="btn btn-secondary">
+                        {{item.name}}
+                </button>
+                </div>
+
+                {% endfor%}
+
+            </div>
+        </div>
+</div>
+
+</div>
+
+
+
+{% endblock %}
