@@ -36,9 +36,10 @@ class Product(models.Model):
 
 class ProductVariant(models.Model):
     product = models.ForeignKey('Product', related_name='product_vars')
+    weight_override = models.ForeignKey('ProductWeight', related_name='product_variants')
     name = models.CharField(max_length=50)
     price_override = models.DecimalField(max_digits=10, decimal_places=2, null=True)
-    weight_override = models.ManyToManyField('ProductWeight', related_name='product_variants')
+
 
     objects = Manager()
 
@@ -47,16 +48,23 @@ class ProductVariant(models.Model):
 
 
 class ProductWeight(models.Model):
-    SMALL = ('S', '250g')
-    MEDIUM = ('M', '500g')
-    LARGE = ('L', '1kg')
-
-    __sizes = dict([SMALL, MEDIUM, LARGE])
-
-    weight = models.CharField(max_length=1, choices=__sizes.items())
+    weight = models.CharField(max_length=10)
 
     def __str__(self):
-        return str(self.__sizes[self.weight])
+        return '{} g'.format(self.weight)
+
+
+# class ProductWeight(models.Model):
+#     SMALL = ('S', '250g')
+#     MEDIUM = ('M', '500g')
+#     LARGE = ('L', '1kg')
+#
+#     __sizes = dict([SMALL, MEDIUM, LARGE])
+#
+#     weight = models.CharField(max_length=1, choices=__sizes.items())
+#
+#     def __str__(self):
+#         return str(self.__sizes[self.weight])
 
 
 class ProductType(models.Model):

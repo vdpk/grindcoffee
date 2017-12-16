@@ -18,13 +18,14 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 
 from catalog import urls as catalog_urs
-
+from auth_app import urls as auth_urls
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', TemplateView.as_view(template_name='catalog/dev_banner.html'), name='home'),
     url(r'^catalog/', include(catalog_urs, namespace='catalog')),
+    url(r'^auth/', include(auth_urls, namespace='auth'))
 
 
 

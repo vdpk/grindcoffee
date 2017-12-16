@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     #custom apps
     'catalog',
+    'auth_app',
 ]
 
 MIDDLEWARE = [
@@ -102,7 +103,14 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+#Authorization part
+AUTH_USER_MODEL='auth_app.ClientUser'
+LOGIN_URL='/auth/login'
+LOGIN_REDIRECT_URL='/'
 
+AUTHENTICATION_BACKENDS={
+    'django.contrib.auth.backends.ModelBackend',
+}
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 

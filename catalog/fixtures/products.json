@@ -1,0 +1,190 @@
+[
+  {
+    "model": "catalog.Product",
+    "pk":1,
+    "fields": {
+      "name": "Arabica - grind coffee",
+      "description": "grind description",
+      "weight": 100,
+      "price": 12.15,
+      "quantity": 20,
+      "is_available": "True",
+      "has_variants": "True",
+      "product_type": 5
+    }
+  },
+  {
+    "model": "catalog.Product",
+    "pk":2,
+    "fields": {
+      "name": "Arabica in grains2",
+      "description": "Arabica in grains description",
+      "weight": 100,
+      "price": 12.15,
+      "quantity": 20,
+      "is_available": "True",
+      "has_variants": "True",
+      "product_type": 5
+    }
+  },
+  {
+    "model": "catalog.Product",
+    "pk":3,
+    "fields": {
+      "name": "Arabica in grains3",
+      "description": "Arabica in grains description",
+      "weight": 100,
+      "price": 12.15,
+      "quantity": 20,
+      "is_available": "True",
+      "has_variants": "True",
+      "product_type": 5
+    }
+  },
+  {
+    "model": "catalog.Product",
+    "pk":4,
+    "fields": {
+      "name": "Arabica in grains4",
+      "description": "Arabica in grains description",
+      "weight": 100,
+      "price": 12.15,
+      "quantity": 20,
+      "is_available": "True",
+      "has_variants": "True",
+      "product_type": 5
+    }
+  },
+  {
+    "model": "catalog.Product",
+    "pk":5,
+    "fields": {
+      "name": "Arabica in grains5",
+      "description": "Arabica in grains description",
+      "weight": 100,
+      "price": 12.15,
+      "quantity": 20,
+      "is_available": "True",
+      "has_variants": "True",
+      "product_type": 5
+    }
+  },
+  {
+    "model": "catalog.Product",
+    "pk":6,
+    "fields": {
+      "name": "Arabica in grains6",
+      "description": "Arabica in grains description",
+      "weight": 100,
+      "price": 12.15,
+      "quantity": 20,
+      "is_available": "True",
+      "has_variants": "True",
+      "product_type": 5
+    }
+  },
+  {
+    "model": "catalog.Product",
+    "pk":7,
+    "fields": {
+      "name": "Arabica in grains7",
+      "description": "Arabica in grains description",
+      "weight": 100,
+      "price": 12.15,
+      "quantity": 20,
+      "is_available": "True",
+      "has_variants": "True",
+      "product_type": 5
+    }
+  },
+  {
+    "model": "catalog.Product",
+    "pk":8,
+    "fields": {
+      "name": "Oolong",
+      "description": "Oolong description",
+      "weight": 100,
+      "price": 12.15,
+      "quantity": 20,
+      "is_available": "True",
+      "has_variants": "True",
+      "product_type": 1
+    }
+  },
+  {
+    "model": "catalog.Product",
+    "pk":9,
+    "fields": {
+      "name": "Майский",
+      "description": "Майский чай любиый (нет) чай",
+      "weight": 100,
+      "price": 12.15,
+      "quantity": 20,
+      "is_available": "True",
+      "has_variants": "True",
+      "product_type": 2
+    }
+  },
+  {
+    "model": "catalog.ProductVariant",
+    "pk":1,
+    "fields": {
+      "product": 1,
+      "weight_override": 1,
+      "name": "Arabica-100",
+      "price_override": 120.0
+    }
+  },
+  {
+    "model": "catalog.ProductVariant",
+    "pk":2,
+    "fields": {
+      "product": 1,
+      "weight_override": 2,
+      "name": "Arabica-250",
+      "price_override": 300.0
+    }
+  },
+  {
+    "model": "catalog.ProductVariant",
+    "pk":3,
+    "fields": {
+      "product": 1,
+      "weight_override": 3,
+      "name": "Arabica-500",
+      "price_override": 600.0
+    }
+  },
+  {
+    "model": "catalog.ProductVariant",
+    "pk":4,
+    "fields": {
+      "product": 9,
+      "weight_override": 1,
+      "name": "May-100",
+      "price_override": 20.0
+    }
+  },
+  {
+    "model": "catalog.ProductVariant",
+    "pk":5,
+    "fields": {
+      "product": 9,
+      "weight_override": 2,
+      "name": "May-250",
+      "price_override": 35.0
+    }
+  },
+  {
+    "model": "catalog.ProductVariant",
+    "pk":6,
+    "fields": {
+      "product": 9,
+      "weight_override": 3,
+      "name": "May-500",
+      "price_override": 70.0
+    }
+  }
+]
+
+
