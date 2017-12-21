@@ -1,4 +1,5 @@
 Django==1.11
+django-cart==1.0.4
 freeze==1.0.10
 pytz==2017.3
 six==1.11.0
