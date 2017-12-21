@@ -1,37 +1,39 @@
 {% extends 'catalog/_base.html' %}
 
-{% block content %}
+{% load static %}
 
+{% block content %}
 
 <div class="container-fluid text-center">
     <div class="row">
-        <div class="col-sm-2">
-            <p>Some text1...</p>
-        </div>
+        <div class="col-sm-2"></div>
 
         <div class="col-sm-8">
             {% for product in products%}
             <div class="col-sm-3">
-                <div class="panel" >
+                <div class="panel panel-default" >
                     <div class="panel-heading">
-                        <p><a href="{% url 'catalog:detail' product_id=product.id %}">{{product.name}}</a></p>
+                        <h4><a href="{% url 'catalog:detail' product_id=product.id %}">{{product.name}}</a></h4>
                     </div>
                     <div class="panel-body">
+                        {% with cat_val=product.product_type.category_id%}
+                        {% if cat_val == 1%}
+                        <img src="{% static 'catalog/oolong_tea.jpg' %}" class="img-responsive" style="width:100%" alt="Second slide"/>
+                        {% else %}
+                        <img src="{% static 'catalog/coffe_grains.jpg' %}" class="img-responsive" style="width:100%" alt="Second slide"/>
+                        {% endif %}
+                        {% endwith %}
                         <p>{{product.description}}</p>
                     </div>
                     <div class="panel-footer">
-                        <p>{{product.price}}</p>
-                        <p>{{product.product_type.category}}</p>
-                        <p>{{product.product_type.category_id}}</p>
+                        <p>Цена: {{product.price}}</p>
                     </div>
                 </div>
             </div>
             {%endfor%}
         </div>
 
-        <div class="col-sm-2">
-            <p>Some text1...</p>
-        </div>
+        <div class="col-sm-2"</div>
     </div>
 </div>
 

@@ -1,0 +1,32 @@
+{% extends 'catalog/_base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-5">
+
+        <h2>Личный кабинет!</h2>
+
+
+        <h3>Привет, {{user.username}}</h3>
+
+
+        <p>Ваши заказы</p>
+            {% for order in orders %}
+            <h3><a href="{% url 'account:order' pk=order.id cart_id=order.cart_id%}">{{order}}</a></h3>
+            {% endfor%}
+
+            {% block user_order%}
+            {% endblock%}
+
+    </div>
+
+    <div class="col-sm-1">
+
+    </div>
+</div>
+
+
+
+
+{% endblock %}

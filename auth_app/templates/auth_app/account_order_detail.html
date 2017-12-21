@@ -1,0 +1,26 @@
+{% extends 'auth_app/cabinet.html' %}
+
+{% block user_order %}
+<h3>Заказ №{{order.id}} от {{order.created_date}}</h3>
+
+ <table class="table table-bordered">
+            <tr>
+                <th>Название продукта</th>
+
+                <th>Количество</th>
+            </tr>
+            {% for item in items %}
+            <tr>
+                <td>{{ item.product.name }}</td>
+                <td>{{ item.quantity }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+<h3>Адрес доставки: {{order.address}}</h3>
+<h3>Время доставки: {{order.delivery_time}}</h3>
+<h3>Комментарий к заказу: {{order.comment}}</h3>
+<p><a href="{% url 'account:cabinet' pk=user.id  %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true"> Вернуться в личный кабинет</a></p>
+
+
+{% endblock %}

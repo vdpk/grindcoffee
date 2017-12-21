@@ -1,0 +1,33 @@
+{% extends 'catalog/_base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+        <h3 align="center">Корзина товаров!</h3>
+        <table class="table table-bordered">
+            <tr>
+                <th>Название продукта</th>
+
+                <th>Количество</th>
+                <th>Итоговая стоимость</th>
+            </tr>
+            {% for item in cart %}
+            <tr>
+                <td> {{item.cart.id}} {{ item.product.name }}</td>
+                <td>{{ item.quantity }}</td>
+                <td>{{ item.total_price }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% if check_item_state|length != 0 %}
+        <p align="center"><a href="{% url 'order:detail' user_id=user.id cart_id=cart.cart.id%}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true"> Перейти к оформлению заказа</a></p>
+        {% endif %}
+    </div>
+    <div class="col-sm-3"></div>
+</div>
+
+
+
+
+{% endblock %}

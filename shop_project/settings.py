@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     #custom apps
     'catalog',
     'auth_app',
+    'order',
+    #django-cart
+    'cart',
 ]
 
 MIDDLEWARE = [
@@ -105,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 #Authorization part
 AUTH_USER_MODEL='auth_app.ClientUser'
-LOGIN_URL='/auth/login'
+LOGIN_URL='/account/login'
 LOGIN_REDIRECT_URL='/'
 
 AUTHENTICATION_BACKENDS={

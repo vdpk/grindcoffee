@@ -5,4 +5,4 @@ from auth_app.models import ClientUser
 class ClientCreationForm(UserCreationForm):
     class Meta:
         model = ClientUser
-        fields = ('username',)
+        fields = ('username','first_name',)

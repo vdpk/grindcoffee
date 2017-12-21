@@ -3,65 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--CSS-->
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!--JS-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
- <style>
-    /* Remove the navbar's default rounded borders and increase the bottom margin */
-    .navbar {
-      margin-bottom: 50px;
-      border-radius: 0;
-      <!--display: inline-block;-->
-      <!--float: none;-->
-    }
-    .navbar .navbar-collapse {
-        text-align: center;
-        }
-    /* Remove the jumbotron's default bottom margin */
-     .jumbotron {
-      margin-bottom: 0;
-    }
-
-    /* Add a gray background color and some padding to the footer */
-    footer {
-      background-color: #f2f2f2;
-      padding: 25px;
-    }
-     .flex-container {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-
-
-  </style>
-
-
+    {% include 'snippets/css.html' %}
     <title>{% block title %}Shop{% endblock %}</title>
-</head>
-<body>
 
-<div class="jumbotron">
-  <div class="container text-center">
-    <h1>GrindCoffee Online Store</h1>
-    <p>Some sample text</p>
-  </div>
-</div>
+</head>
+{% load static %}
+<body>
+    <div class="jumbotron">
+      <div class="container text-center">
+        <h1>GrindCoffee Online Store</h1>
+        <p>Store..Simple store</p>
+      </div>
+    </div>
 
 {% include 'snippets/nav.html' %}
 
-
-<p align="center">This is center</p>
-
-<!--<div class="col-sm-2"></div>-->
 {% block content %}
 
-
-
 {% endblock%}
-<!--<div class="col-sm-2"></div>-->
+
+
+
+
+{% include 'snippets/js.html' %}
 
 </body>
 </html>

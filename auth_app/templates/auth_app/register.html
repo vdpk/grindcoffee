@@ -1,12 +1,17 @@
 {% extends 'catalog/_base.html' %}
 
 {% block content %}
-<h1>Register,sir</h1>
 
-<form action="{% url 'auth:register' %}" method="POST">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="Saubmit">
-</form>
+<div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-7">
+        <h3>Введите свои данные</h3>
+        <form action="{% url 'account:register' %}" method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="Подтвердить">
+        </form>
+    </div>
+</div>
 
 {% endblock %}

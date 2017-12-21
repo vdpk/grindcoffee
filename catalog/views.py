@@ -23,8 +23,8 @@ class ProductDetailView(DetailView):
         obj = get_object_or_404(Product, pk=product_id)
         return obj
 
-    def get_context_data(self, *args, **kwargs):
-        context = super(ProductDetailView, self).get_context_data(*args,**kwargs)
-        context['product_variants'] = ProductVariant.objects.filter(product=self.kwargs.get('product_id'))
-        print(context)
-        return context
+    # def get_context_data(self, *args, **kwargs):
+    #     context = super(ProductDetailView, self).get_context_data(*args,**kwargs)
+    #     context['product_variants'] = ProductVariant.objects.filter(product=self.kwargs.get('product_id'))
+    #     print(context)
+    #     return context

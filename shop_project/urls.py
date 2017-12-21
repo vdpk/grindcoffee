@@ -18,17 +18,22 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 
 from catalog import urls as catalog_urs
+from cart.views import get_cart
 from auth_app import urls as auth_urls
+
+from cart import urls as cart_urls
+from order import urls as order_urls
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', TemplateView.as_view(template_name='catalog/dev_banner.html'), name='home'),
+    url(r'^$', TemplateView.as_view(template_name='catalog/home_page.html'), name='home'),
     url(r'^catalog/', include(catalog_urs, namespace='catalog')),
-    url(r'^auth/', include(auth_urls, namespace='auth'))
 
+    url(r'^account/', include(auth_urls, namespace='account')),
 
-
-    # url(r'^cart/', TemplateView.as_view(template_name='catalog/_page.html'), name='cart'),
+    # url(r'^cart/', get_cart, name='cart'),
+    url(r'^cart/', include(cart_urls, namespace='cart')),
+    url(r'^order/', include(order_urls, namespace='order'))
     # url(r'^about/', TemplateView.as_view(template_name='catalog/_page.html'), name='about'),
 ]

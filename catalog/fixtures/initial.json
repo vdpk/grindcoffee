@@ -1,0 +1,108 @@
+[
+  {
+    "model": "catalog.ProductWeight",
+    "pk":1,
+    "fields": {
+      "weight": "100"
+    }
+  },
+  {
+    "model": "catalog.ProductWeight",
+    "pk":2,
+    "fields": {
+      "weight": "250"
+    }
+  },
+  {
+    "model": "catalog.ProductWeight",
+    "pk":3,
+    "fields": {
+      "weight": "500"
+    }
+  },
+  {
+    "model": "catalog.ProductWeight",
+    "pk":4,
+    "fields": {
+      "weight": "1000"
+    }
+  },
+  {
+    "model": "catalog.Category",
+    "pk":1,
+    "fields": {
+      "title": "Tea"
+    }
+  },
+  {
+    "model": "catalog.Category",
+    "pk":2,
+    "fields": {
+      "title": "Coffee"
+    }
+  },
+  {
+    "model": "catalog.ProductType",
+    "pk":1,
+    "fields": {
+      "title": "Oolong Tea",
+      "category": 1
+    }
+  },
+  {
+    "model": "catalog.ProductType",
+    "pk":2,
+    "fields": {
+      "title": "Black Tea",
+      "category": 1
+    }
+  },
+  {
+    "model": "catalog.ProductType",
+    "pk":3,
+    "fields": {
+      "title": "Green Tea",
+      "category": 1
+    }
+  },
+  {
+    "model": "catalog.ProductType",
+    "pk":4,
+    "fields": {
+      "title": "Flower Tea",
+      "category": 1
+    }
+  },
+  {
+    "model": "catalog.ProductType",
+    "pk":5,
+    "fields": {
+      "title": "Arabica",
+      "category": 2
+    }
+  },
+  {
+    "model": "catalog.ProductType",
+    "pk":6,
+    "fields": {
+      "title": "Canephora",
+      "category": 2
+    }
+  },
+  {
+    "model": "catalog.ProductType",
+    "pk":7,
+    "fields": {
+      "title": "Liberica",
+      "category": 2
+    }
+  },
+  {
+    "model": "catalog.ProductType",
+    "pk":8,
+    "fields": {
+      "title": "Dewevrei",
+      "category": 2
+    }
+  }
+]
