@@ -3,7 +3,8 @@ import datetime
 
 class ProductOrder(models.Model):
     customer_id = models.CharField(max_length=120)
-    cart_id = models.CharField(max_length=120)
+
+    cart_id = models.CharField(max_length=120, default=None)
 
 
     address = models.CharField(max_length=450, verbose_name='Укажите свой адрес')
