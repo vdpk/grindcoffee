@@ -1,18 +1,12 @@
 from django.db import models
-
-
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.contenttypes.models import ContentType
 
-from django.db.models import Manager
-from catalog.models import Product
-from auth_app.models import ClientUser
 
 class Cart(models.Model):
     creation_date = models.DateTimeField(verbose_name=_('creation date'))
     checked_out = models.BooleanField(default=False, verbose_name=_('checked out'))
 
-    # order = models.ForeignKey('ProductOrder', related_name='product_order')
 
     class Meta:
         verbose_name = _('cart')
@@ -20,7 +14,7 @@ class Cart(models.Model):
         ordering = ('-creation_date',)
 
     def __str__(self):
-        return str(self.creation_date)
+        return str(self.pk)
 
     def set_check_out(self, commit=True):
         self.checked_out = True
@@ -53,7 +47,7 @@ class Item(models.Model):
         ordering = ('cart',)
 
     def __str__(self):
-        return '%d units of %s' % (self.quantity, self.product.__class__.__name__)
+        return '%d штук %s' % (self.quantity, self.product.name)
 
     def total_price(self):
         return self.quantity * self.unit_price

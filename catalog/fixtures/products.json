@@ -3,11 +3,11 @@
     "model": "catalog.Product",
     "pk":1,
     "fields": {
-      "name": "Arabica - grind coffee",
-      "description": "grind description",
+      "name": "Арабика",
+      "description": "Арабика — наиболее распространённый вид кофе. Вид кофейного дерева кофе аравийский, из которого получают зёрна этого сорта, произрастает на высоте от 900 до 2000 метров над уровнем моря. Зёрна, как правило, имеют продолговатую форму, гладкую поверхность, слегка изогнутую в форме буквы S линию, в которой обычно после лёгкой обжарки остаются невыгоревшие частицы кофейной ягоды",
       "weight": 100,
       "price": 12.15,
-      "quantity": 20,
+      "quantity": 1,
       "is_available": "True",
       "has_variants": "True",
       "product_type": 5
@@ -17,11 +17,11 @@
     "model": "catalog.Product",
     "pk":2,
     "fields": {
-      "name": "Arabica in grains2",
-      "description": "Arabica in grains description",
+      "name": "Арабика в зернах",
+      "description": "Арабика — наиболее распространённый вид кофе. Вид кофейного дерева кофе аравийский, из которого получают зёрна этого сорта, произрастает на высоте от 900 до 2000 метров над уровнем моря. Зёрна, как правило, имеют продолговатую форму, гладкую поверхность, слегка изогнутую в форме буквы S линию, в которой обычно после лёгкой обжарки остаются невыгоревшие частицы кофейной ягоды",
       "weight": 100,
       "price": 12.15,
-      "quantity": 20,
+      "quantity": 1,
       "is_available": "True",
       "has_variants": "True",
       "product_type": 5
@@ -31,36 +31,36 @@
     "model": "catalog.Product",
     "pk":3,
     "fields": {
-      "name": "Arabica in grains3",
-      "description": "Arabica in grains description",
+      "name": "Робуста",
+      "description": "Робуста обычно считается менее изысканным сортом кофейного зерна с точки зрения аромата. В то же время она содержит больше кофеина, а также часто используется в эспрессо-смесях, что позволяет добиваться более качественной кофейной пенки и удешевляет смесь.",
       "weight": 100,
       "price": 12.15,
       "quantity": 20,
       "is_available": "True",
       "has_variants": "True",
-      "product_type": 5
+      "product_type": 6
     }
   },
   {
     "model": "catalog.Product",
     "pk":4,
     "fields": {
-      "name": "Arabica in grains4",
-      "description": "Arabica in grains description",
+      "name": "Робуста 2",
+      "description": "Робуста обычно считается менее изысканным сортом кофейного зерна с точки зрения аромата. В то же время она содержит больше кофеина, а также часто используется в эспрессо-смесях, что позволяет добиваться более качественной кофейной пенки и удешевляет смесь.",
       "weight": 100,
       "price": 12.15,
       "quantity": 20,
       "is_available": "True",
       "has_variants": "True",
-      "product_type": 5
+      "product_type": 6
     }
   },
   {
     "model": "catalog.Product",
     "pk":5,
     "fields": {
-      "name": "Arabica in grains5",
-      "description": "Arabica in grains description",
+      "name": "Арабика 2",
+      "description": "Арабика — наиболее распространённый вид кофе. Вид кофейного дерева кофе аравийский, из которого получают зёрна этого сорта, произрастает на высоте от 900 до 2000 метров над уровнем моря. Зёрна, как правило, имеют продолговатую форму, гладкую поверхность, слегка изогнутую в форме буквы S линию, в которой обычно после лёгкой обжарки остаются невыгоревшие частицы кофейной ягоды",
       "weight": 100,
       "price": 12.15,
       "quantity": 20,
@@ -73,8 +73,8 @@
     "model": "catalog.Product",
     "pk":6,
     "fields": {
-      "name": "Arabica in grains6",
-      "description": "Arabica in grains description",
+      "name": "Арабика 3",
+      "description": "Арабика — наиболее распространённый вид кофе. Вид кофейного дерева кофе аравийский, из которого получают зёрна этого сорта, произрастает на высоте от 900 до 2000 метров над уровнем моря. Зёрна, как правило, имеют продолговатую форму, гладкую поверхность, слегка изогнутую в форме буквы S линию, в которой обычно после лёгкой обжарки остаются невыгоревшие частицы кофейной ягоды",
       "weight": 100,
       "price": 12.15,
       "quantity": 20,
@@ -87,8 +87,8 @@
     "model": "catalog.Product",
     "pk":7,
     "fields": {
-      "name": "Arabica in grains7",
-      "description": "Arabica in grains description",
+      "name": "Арабика 4",
+      "description": "Арабика — наиболее распространённый вид кофе. Вид кофейного дерева кофе аравийский, из которого получают зёрна этого сорта, произрастает на высоте от 900 до 2000 метров над уровнем моря. Зёрна, как правило, имеют продолговатую форму, гладкую поверхность, слегка изогнутую в форме буквы S линию, в которой обычно после лёгкой обжарки остаются невыгоревшие частицы кофейной ягоды",
       "weight": 100,
       "price": 12.15,
       "quantity": 20,
@@ -102,7 +102,7 @@
     "pk":8,
     "fields": {
       "name": "Oolong",
-      "description": "Oolong description",
+      "description": "Китайский белый чай",
       "weight": 100,
       "price": 12.15,
       "quantity": 20,
@@ -123,66 +123,6 @@
       "is_available": "True",
       "has_variants": "True",
       "product_type": 2
-    }
-  },
-  {
-    "model": "catalog.ProductVariant",
-    "pk":1,
-    "fields": {
-      "product": 1,
-      "weight_override": 1,
-      "name": "Arabica-100",
-      "price_override": 120.0
-    }
-  },
-  {
-    "model": "catalog.ProductVariant",
-    "pk":2,
-    "fields": {
-      "product": 1,
-      "weight_override": 2,
-      "name": "Arabica-250",
-      "price_override": 300.0
-    }
-  },
-  {
-    "model": "catalog.ProductVariant",
-    "pk":3,
-    "fields": {
-      "product": 1,
-      "weight_override": 3,
-      "name": "Arabica-500",
-      "price_override": 600.0
-    }
-  },
-  {
-    "model": "catalog.ProductVariant",
-    "pk":4,
-    "fields": {
-      "product": 9,
-      "weight_override": 1,
-      "name": "May-100",
-      "price_override": 20.0
-    }
-  },
-  {
-    "model": "catalog.ProductVariant",
-    "pk":5,
-    "fields": {
-      "product": 9,
-      "weight_override": 2,
-      "name": "May-250",
-      "price_override": 35.0
-    }
-  },
-  {
-    "model": "catalog.ProductVariant",
-    "pk":6,
-    "fields": {
-      "product": 9,
-      "weight_override": 3,
-      "name": "May-500",
-      "price_override": 70.0
     }
   }
 ]

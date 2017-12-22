@@ -1,7 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import  get_object_or_404
 from django.views.generic import ListView, DetailView
 
-from .models import Product, ProductVariant
+from .models import Product
 
 
 class ProductCategoryListView(ListView):
@@ -23,8 +23,3 @@ class ProductDetailView(DetailView):
         obj = get_object_or_404(Product, pk=product_id)
         return obj
 
-    # def get_context_data(self, *args, **kwargs):
-    #     context = super(ProductDetailView, self).get_context_data(*args,**kwargs)
-    #     context['product_variants'] = ProductVariant.objects.filter(product=self.kwargs.get('product_id'))
-    #     print(context)
-    #     return context

@@ -1,12 +1,8 @@
 {% extends 'catalog/_base.html' %}
 
-{% block content %}
 {% load static %}
 
-{% for message in messages %}
-<h3 {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{message}}</h3>
-{% endfor %}
-
+{% block content %}
 
 <div id="shopCarousel" class="carousel slide" data-ride="carousel" align="center">
     <ol class="carousel-indicators">

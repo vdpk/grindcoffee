@@ -13,7 +13,6 @@ class OrderForm(forms.ModelForm):
 
     def clean(self):
         data = self.cleaned_data
-        # excluded = data['exclude']
         return data
 
 

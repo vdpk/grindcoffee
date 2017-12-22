@@ -85,7 +85,7 @@
     "model": "catalog.ProductType",
     "pk":6,
     "fields": {
-      "title": "Canephora",
+      "title": "Robusta",
       "category": 2
     }
   },
