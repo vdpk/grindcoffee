@@ -22,7 +22,7 @@ class Product(models.Model):
 
     has_variants = models.BooleanField(default=False)
 
-    product_type = models.ForeignKey('ProductType', related_name='products')
+    product_type = models.ForeignKey('ProductType', related_name='products', on_delete=models.CASCADE)
 
     objects = Manager()
     available_objects = ProductAvailableManager()
@@ -30,21 +30,7 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
-#
-#     пока не реализовано - варианты товаров по весу
-#
-# class ProductVariant(models.Model):
-#
-#     product = models.ForeignKey('Product', related_name='product_vars')
-#     weight_override = models.ForeignKey('ProductWeight', related_name='product_variants')
-#     name = models.CharField(max_length=50)
-#     price_override = models.DecimalField(max_digits=10, decimal_places=2, null=True)
-#
-#
-#     objects = Manager()
-#
-#     def __str__(self):
-#         return self.name
+
 
 
 class ProductWeight(models.Model):
@@ -59,7 +45,7 @@ class ProductType(models.Model):
     # тип продукта (например, арабика)
     title = models.CharField(max_length=50)
 
-    category = models.ForeignKey('Category', related_name='product_type')
+    category = models.ForeignKey('Category', related_name='product_type', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title

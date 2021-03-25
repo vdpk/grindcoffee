@@ -2,7 +2,7 @@
 from cart.cart import Cart
 from cart.models import Item
 from catalog.models import Product
-from django.shortcuts import render_to_response, HttpResponseRedirect, HttpResponse, render, redirect
+from django.shortcuts import HttpResponseRedirect, HttpResponse, render, redirect
 from django.contrib import messages
 
 from auth_app.models import ClientUser
@@ -37,7 +37,7 @@ def get_cart(request, user_id):
     user_info = ClientUser.objects.get(pk=user_id)
     check_item = Item.objects.filter(cart=Cart(request).cart.pk)
 
-    return render_to_response('cart/cart.html',{'cart': Cart(request), 'user': user_info, 'check_item_state': check_item})
+    return render(request ,'cart/cart.html',{'cart': Cart(request), 'user': user_info, 'check_item_state': check_item})
 
 
 
