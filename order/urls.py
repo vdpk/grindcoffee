@@ -1,8 +1,8 @@
-from django.conf.urls import url
+from django.urls import path
 from order.views import order_product
 
 
-
+app_name = 'order'
 urlpatterns = [
-    url(r'^(?P<user_id>\d+)/(?P<cart_id>\d+)/$', order_product, name='detail')
+    path('<user_id>/<cart_id>/', order_product, name='detail')
 ]

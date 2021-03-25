@@ -1,11 +1,8 @@
-from django.conf.urls import url
-from catalog.views import (
-    ProductDetailView,
-    ProductCategoryListView
-    )
+from django.urls import path
+from catalog.views import (ProductDetailView, ProductCategoryListView)
 
-
+app_name = 'catalog'
 urlpatterns = [
-    url(r'^category/(?P<category_id>\d+)/', ProductCategoryListView.as_view(), name='category'),
-    url(r'^(?P<product_id>\d+)/', ProductDetailView.as_view(), name='detail'),
+    path('category/<category_id>/', ProductCategoryListView.as_view(), name='category'),
+    path('<product_id>/', ProductDetailView.as_view(), name='detail'),
 ]
